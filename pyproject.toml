@@ -8,7 +8,9 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
 dependencies = [
-    "loguru (>=0.7.3,<0.8.0)"
+    "loguru (>=0.7.3,<0.8.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "fastparquet (>=2024.11.0,<2025.0.0)"
 ]
 
 

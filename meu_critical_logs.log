@@ -1,0 +1,120 @@
+2025-04-27T10:12:23.169121-0300 ERROR Excecao capturada em 'carregar_dados': Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet. utils_log.py
+Traceback (most recent call last):
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\pipeline.py", line 6, in <module>
+    pipeline_calcular_kpi_de_vendas_consolidado(pasta_argumento, output)
+    │                                           │                └ ['parquet']
+    │                                           └ 'data'
+    └ <function pipeline_calcular_kpi_de_vendas_consolidado at 0x00000152F3026DE0>
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\utils_log.py", line 24, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ ('data', ['parquet'])
+             └ <function pipeline_calcular_kpi_de_vendas_consolidado at 0x00000152F3026D40>
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\etl.py", line 37, in pipeline_calcular_kpi_de_vendas_consolidado
+    carregar_dados(data_frame_calculado, output)
+    │              │                     └ ['parquet']
+    │              └             Produto    Categoria  Quantidade  Venda        Data  Total
+    │                0    Notebook Gamer  Eletrônicos           3   1500  2...
+    └ <function carregar_dados at 0x00000152F3026CA0>
+
+> File "D:\workspace\jornada\bc_python\bc_python_aula09\utils_log.py", line 24, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ (            Produto    Categoria  Quantidade  Venda        Data  Total
+             │       0    Notebook Gamer  Eletrônicos           3   1500  ...
+             └ <function carregar_dados at 0x00000152F3013CE0>
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\etl.py", line 30, in carregar_dados
+    df.to_parquet("dados.parquet", index=False)
+    │  └ <function DataFrame.to_parquet at 0x00000152F2ADA020>
+    └             Produto    Categoria  Quantidade  Venda        Data  Total
+      0    Notebook Gamer  Eletrônicos           3   1500  2...
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'index': False}
+           │     └ (            Produto    Categoria  Quantidade  Venda        Data  Total
+           │       0    Notebook Gamer  Eletrônicos           3   1500  ...
+           └ <function DataFrame.to_parquet at 0x00000152F2AD9EE0>
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\core\frame.py", line 3113, in to_parquet
+    return to_parquet(
+           └ <function to_parquet at 0x00000152F2D6C4A0>
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\io\parquet.py", line 476, in to_parquet
+    impl = get_engine(engine)
+           │          └ 'auto'
+           └ <function get_engine at 0x00000152F2CB2DE0>
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\io\parquet.py", line 67, in get_engine
+    raise ImportError(
+
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-04-27T10:12:23.204855-0300 ERROR Excecao capturada em 'pipeline_calcular_kpi_de_vendas_consolidado': Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet. utils_log.py
+Traceback (most recent call last):
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\pipeline.py", line 6, in <module>
+    pipeline_calcular_kpi_de_vendas_consolidado(pasta_argumento, output)
+    │                                           │                └ ['parquet']
+    │                                           └ 'data'
+    └ <function pipeline_calcular_kpi_de_vendas_consolidado at 0x00000152F3026DE0>
+
+> File "D:\workspace\jornada\bc_python\bc_python_aula09\utils_log.py", line 24, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ ('data', ['parquet'])
+             └ <function pipeline_calcular_kpi_de_vendas_consolidado at 0x00000152F3026D40>
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\etl.py", line 37, in pipeline_calcular_kpi_de_vendas_consolidado
+    carregar_dados(data_frame_calculado, output)
+    │              │                     └ ['parquet']
+    │              └             Produto    Categoria  Quantidade  Venda        Data  Total
+    │                0    Notebook Gamer  Eletrônicos           3   1500  2...
+    └ <function carregar_dados at 0x00000152F3026CA0>
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\utils_log.py", line 24, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ (            Produto    Categoria  Quantidade  Venda        Data  Total
+             │       0    Notebook Gamer  Eletrônicos           3   1500  ...
+             └ <function carregar_dados at 0x00000152F3013CE0>
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\etl.py", line 30, in carregar_dados
+    df.to_parquet("dados.parquet", index=False)
+    │  └ <function DataFrame.to_parquet at 0x00000152F2ADA020>
+    └             Produto    Categoria  Quantidade  Venda        Data  Total
+      0    Notebook Gamer  Eletrônicos           3   1500  2...
+
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'index': False}
+           │     └ (            Produto    Categoria  Quantidade  Venda        Data  Total
+           │       0    Notebook Gamer  Eletrônicos           3   1500  ...
+           └ <function DataFrame.to_parquet at 0x00000152F2AD9EE0>
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\core\frame.py", line 3113, in to_parquet
+    return to_parquet(
+           └ <function to_parquet at 0x00000152F2D6C4A0>
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\io\parquet.py", line 476, in to_parquet
+    impl = get_engine(engine)
+           │          └ 'auto'
+           └ <function get_engine at 0x00000152F2CB2DE0>
+  File "D:\workspace\jornada\bc_python\bc_python_aula09\.venv\Lib\site-packages\pandas\io\parquet.py", line 67, in get_engine
+    raise ImportError(
+
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
